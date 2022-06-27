@@ -1,0 +1,5 @@
+# cat-management
+
+Ein Katzenverwaltungstool, wo man seine Katzen verwalten kann. Man kann über ein Form neue Katzen hinzufügen. 
+Die Katzen können dann angeschaut werden. Es werden keine Bilder sondern nur Textinformationen über die Katzen hochgeladen.
+Die Website wird dann auf Deutsch und Englisch verfügbar sein.
