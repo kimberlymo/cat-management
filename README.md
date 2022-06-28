@@ -9,6 +9,6 @@ Die Website wird dann auf Deutsch und Englisch verfügbar sein.
 ## Layout
 
 Layout for computer:
-![alt text](https://github.com/kimberlymo/cat-management/blob/master/images/layout-computer.jpg?raw=true)
+![alt text](https://github.com/kimberlymo/cat-management/blob/master/images/layout-computer.png?raw=true)
 
 ## GUI Skizzen
