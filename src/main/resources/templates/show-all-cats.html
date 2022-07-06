@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="webjars/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <title>Cat Management</title>
+</head>
+<body>
+<h1>Cats</h1>
+<table class="table table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Birthday</th>
+        <th>Color</th>
+        <th>Is an outdoor cat?</th>
+    </tr>
+    <tbody>
+    <tr th:each="kitty : ${allCats}">
+        <td th:text="${kitty.getName()}"></td>
+        <td th:text="${kitty.getBirthday()}"></td>
+        <td th:text="${kitty.getColor()}"></td>
+        <td th:text="${kitty.isOutdoor()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

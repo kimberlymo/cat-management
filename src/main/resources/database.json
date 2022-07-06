@@ -1,0 +1,16 @@
+{
+  "cats": [
+    {
+      "name": "bob",
+      "birthday": "2020-01-01",
+      "color": "white",
+      "outdoor": false
+    },
+    {
+      "name": "bobby Ross",
+      "birthday": "2020-02-02",
+      "color": "black",
+      "outdoor": true
+    }
+  ]
+}
