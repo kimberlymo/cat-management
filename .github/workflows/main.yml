@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install prettier
-        run: npm install -g prettier
+        run: npm install --location=global prettier
 
       # Runs a set of commands using the runners shell
       - name: Check formatting
