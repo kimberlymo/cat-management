@@ -1,7 +1,22 @@
-<body xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-  <div class="wrapper">
-    <div th:replace="fragments/fragments-sidebar :: sidebar"></div>
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link
+      href="webjars/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <title>Cat Management</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div th:replace="fragments/fragments-sidebar :: sidebar"></div>
 
-    <div data-layout-fragment="content"></div>
-  </div>
-</body>
+      <div layout:fragment="content"></div>
+    </div>
+  </body>
+</html>
