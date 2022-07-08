@@ -10,7 +10,11 @@ import java.util.List;
 @Controller
 public class CatController {
 
-    private CatRepository repository = new CatRepository();
+    private final CatRepository repository;
+
+    public CatController(final CatRepository repository) {
+        this.repository = repository;
+    }
 
     @GetMapping("/cats")
     public String showAllCats(Model model, @ModelAttribute Cat cat) {
