@@ -31,13 +31,14 @@ public class CatController {
         return repository.getAllCats();
     }
 
-    @PutMapping("/updateCat/{id}")
+    @GetMapping("/updateCat/{id}")
     public String updateCat(Model model, @Valid Cat catToEdit, BindingResult bindingResult, @PathVariable String name) {
         model.addAttribute("newValues", catToEdit);
 
         if (bindingResult.hasErrors()) {
             return "show-all-cats";
         }
-        return "response";
+
+        return "update-view";
     }
 }
