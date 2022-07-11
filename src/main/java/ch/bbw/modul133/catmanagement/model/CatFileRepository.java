@@ -6,11 +6,11 @@ import org.springframework.core.io.ClassPathResource;
 import java.io.File;
 import java.io.IOException;
 
-public class ReadData implements FileRepository<CatManagement> {
+public class CatFileRepository implements FileRepository<CatManagement> {
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final File file;
 
-    public ReadData() {
+    public CatFileRepository() {
         try {
             file = new ClassPathResource("database.json").getFile();
         } catch (IOException e) {

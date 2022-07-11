@@ -1,6 +1,6 @@
 package ch.bbw.modul133.catmanagement.controller;
 
-import ch.bbw.modul133.catmanagement.model.CatRepository;
+import ch.bbw.modul133.catmanagement.service.CatService;
 import ch.bbw.modul133.catmanagement.model.Cat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,9 +12,9 @@ import java.util.List;
 @Controller
 public class CatController {
 
-    private final CatRepository repository;
+    private final CatService repository;
 
-    public CatController(final CatRepository repository) {
+    public CatController(final CatService repository) {
         this.repository = repository;
     }
 

@@ -1,5 +1,9 @@
-package ch.bbw.modul133.catmanagement.model;
+package ch.bbw.modul133.catmanagement.service;
 
+import ch.bbw.modul133.catmanagement.model.Cat;
+import ch.bbw.modul133.catmanagement.model.CatManagement;
+import ch.bbw.modul133.catmanagement.model.FileRepository;
+import ch.bbw.modul133.catmanagement.model.CatFileRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -7,14 +11,14 @@ import java.util.Optional;
 import java.util.stream.IntStream;
 
 @Component
-public class CatRepository {
+public class CatService {
     private final FileRepository<CatManagement> readData;
 
-    public CatRepository() {
-        this.readData = new ReadData();
+    public CatService() {
+        this.readData = new CatFileRepository();
     }
 
-    public CatRepository(FileRepository<CatManagement> readData) {
+    public CatService(FileRepository<CatManagement> readData) {
         this.readData = readData;
     }
 
