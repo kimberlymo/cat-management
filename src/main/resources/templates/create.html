@@ -52,13 +52,6 @@
                                              value="Reset"/></td>
         </tr>
       </table>
-
-      <h2>global errors</h2>
-      <ul>
-        <li th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Invalid name</li>
-        <li th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}">Invalid birthday</li>
-        <li th:if="${#fields.hasErrors('color')}" th:errors="*{color}">Invalid color</li>
-      </ul>
     </form>
   </div>
 </div>
