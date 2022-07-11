@@ -17,7 +17,7 @@
   <div class="container-fluid col-8">
     <h1>Cats</h1>
     <form th:action="@{/addCat}"
-          th:object="${addCat}" method="post">
+          th:object="${cat}" method="post">
       <table class="table">
         <tr>
           <td><label for="name" th:text="#{cat.name}"></label></td>
@@ -55,11 +55,9 @@
 
       <h2>global errors</h2>
       <ul>
-        <li th:if="${#fields.hasErrors('vorname')}" th:errors="*{vorname}">Ungültiger Vorname</li>
-        <li th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Ungültiger Name</li>
-        <li th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Ungültiger Email</li>
-        <li th:if="${#fields.hasErrors('telNummer')}" th:errors="*{telNummer}">Ungültiger Telnr</li>
-        <li th:if="${#fields.hasErrors('alter')}" th:errors="*{alter}">Ungültiges Alter</li>
+        <li th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Invalid name</li>
+        <li th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}">Invalid birthday</li>
+        <li th:if="${#fields.hasErrors('color')}" th:errors="*{color}">Invalid color</li>
       </ul>
     </form>
   </div>

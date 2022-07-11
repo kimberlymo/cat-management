@@ -43,9 +43,20 @@ public class CatController {
         return "update-view";
     }
 
+    @GetMapping("/addCat")
+    public String addCatForm(Model model) {
+        model.addAttribute("cat", new Cat());
+        return "create";
+    }
+
     @PostMapping("/addCat")
-    public String addCat(Cat catToAdd) {
+    public String addCat(@Valid Cat catToAdd, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return "create";
+        }
+
         this.service.createCat(catToAdd);
+
         return "show-all-cats";
     }
 }
