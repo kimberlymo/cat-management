@@ -34,6 +34,13 @@ dieser Seite kann auch hier zum Beispiel `Neue Katze erfassen` sein.
 
 <hr/>
 
+### View all Cats
+<img src="images/view-all-cats-computer.png" alt="view all cats on computer" width="400"/>
+
+Here is a wireframe for seeing all cats. The data will be shown in a table and with the `add new cat` button a new window
+will open. With the blue button the cat can be edited for example change the birthday.
+
+
 ## 🎬 Use Cases
 
 <hr/>

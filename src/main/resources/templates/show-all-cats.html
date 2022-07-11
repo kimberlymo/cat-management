@@ -1,27 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" data-layout-decorate="~{fragments/layout}">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link href="webjars/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
     <title>Cat Management</title>
 </head>
 <body>
-<h1>Cats</h1>
-<table class="table table-hover">
-    <tr>
-        <th>Name</th>
-        <th>Birthday</th>
-        <th>Color</th>
-        <th>Is an outdoor cat?</th>
-    </tr>
-    <tbody>
-    <tr th:each="kitty : ${allCats}">
-        <td th:text="${kitty.getName()}"></td>
-        <td th:text="${kitty.getBirthday()}"></td>
-        <td th:text="${kitty.getColor()}"></td>
-        <td th:text="${kitty.isOutdoor()}"></td>
-    </tr>
-    </tbody>
-</table>
+<div class="content" data-layout-fragment="content">
+    <div class="container-fluid col-8">
+        <h1>Cats</h1>
+        <table class="table table-hover" style="background-color: rgba(153,229,38,0.56)">
+            <tr>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>Color</th>
+                <th>Is an outdoor cat?</th>
+            </tr>
+            <tbody style="background-color: rgb(224,248,191)">
+            <tr th:each="kitty : ${allCats}">
+                <td th:text="${kitty.getName()}"></td>
+                <td th:text="${kitty.getBirthday()}"></td>
+                <td th:text="${kitty.getColor()}"></td>
+                <td>
+                    <th:block th:if="${kitty.isOutdoor()}">✔</th:block>
+                    <th:block th:if="${!kitty.isOutdoor()}">❌</th:block>
+                </td>
+                <td>
+                    <a class="btn btn-primary" style="background-color: #26b8e5; border: none" href="#"
+                       role="button">✏️</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-6"></div>
+            <a class="btn btn-primary col-4" style="background-color: #e57426; border: none" href="#"
+               role="button">Add new Cat</a>
+        </div>
+    </div>
+</div>
 </body>
 </html>
