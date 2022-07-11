@@ -1,46 +1,87 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" data-layout-decorate="~{fragments/layout}">
+<html
+        lang="en"
+        xmlns:th="http://www.thymeleaf.org"
+        data-layout-decorate="~{fragments/layout}"
+>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link href="webjars/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"/>
-    <title th:text="kdkkd"></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link
+          href="/webjars/bootstrap/4.4.1/css/bootstrap.min.css"
+          rel="stylesheet"
+  />
+  <title th:text="#{title.cats}"></title>
 </head>
-<body>
-<div class="content" data-layout-fragment="content">
-    <div class="container-fluid col-8">
-        <form method="post" th:object="${editCat}">
-            <div class="input-group mb-3">
-                <span class="input-group-text" th:id="name">Name</span>
-                <input type="text" class="form-control" th:value="${editCat.name}" disabled>
-                <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
-            </div>
+  <body>
+    <div class="content" data-layout-fragment="content">
+      <div class="container-fluid col-8">
+        <h1 th:text="'Update the cat ' + ${editCat.getName()}"></h1>
+        <form method="post" th:object="${editCat}" th:action="@{/updateCat/{id}(id=${editCat.getName()})}">
+          <div class="input-group mb-3">
+            <span class="input-group-text" th:id="name" th:text="#{cat.name}">Name</span>
+            <input
+              type="text"
+              class="form-control"
+              th:value="${editCat.name}"
+              disabled
+            />
+            <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">
+              Name Error
+            </td>
+          </div>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                <span class="input-group-text" th:id="birthday">Birthday</span>
-                <input th:type="date" class="form-control" th:value="${editCat.birthday}">
-                <td th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}">Birthday Error</td>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" th:id="birthday" th:text="#{cat.birthday}"></span>
             </div>
+            <input
+              th:type="date"
+              class="form-control"
+              th:value="${editCat.birthday}"
+            />
+            <td
+              th:if="${#fields.hasErrors('birthday')}"
+              th:errors="*{birthday}"
+            >
+              Birthday Error
+            </td>
+          </div>
 
-            <div class="input-group mb-3">
-                <span class="input-group-text" th:id="color">Color</span>
-                <input th:type="text" class="form-control" th:value="${editCat.color}">
-                <td th:if="${#fields.hasErrors('color')}" th:errors="*{color}">Color Error</td>
-            </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" th:id="color" th:text="#{cat.color}"></span>
+            <input
+              th:type="text"
+              class="form-control"
+              th:value="${editCat.color}"
+            />
+            <td th:if="${#fields.hasErrors('color')}" th:errors="*{color}">
+              Color Error
+            </td>
+          </div>
 
-            <div class="form-check">
-                <input class="form-check-input" th:type="checkbox" th:value="${editCat.outdoor}" th:id="isOutdoor">
-                <label class="form-check-label" th:for="isOutdoor">
-                    Is an outdoor cat?
-                </label>
-            </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              th:type="checkbox"
+              th:value="${editCat.outdoor}"
+              th:id="isOutdoor"
+            />
+            <label class="form-check-label" th:for="isOutdoor" th:text="#{cat.outdoor}">
+            </label>
+          </div>
 
-            <a class="btn btn-primary col-4" style="background-color: #e57426; border: none" th:type="submit"
-                    role="button">
-                Update
-            </a>
+          <hr/>
+
+          <a
+            class="btn btn-primary col-4"
+            style="background-color: #e57426; border: none"
+            th:type="submit"
+            role="button"
+          >
+            Update
+          </a>
         </form>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>

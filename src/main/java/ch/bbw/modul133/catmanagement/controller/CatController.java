@@ -34,6 +34,11 @@ public class CatController {
 
     @GetMapping("/updateCat/{id}")
     public String updateCatView(Model model, @PathVariable String id) {
+        Cat cat = new Cat();
+        cat.setOutdoor(false);
+        cat.setName("jskd");
+        cat.setBirthday("29384");
+        cat.setColor("black");
         model.addAttribute("editCat", new Cat());
         return "update-view";
     }
