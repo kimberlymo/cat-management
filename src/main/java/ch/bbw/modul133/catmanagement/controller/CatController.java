@@ -1,5 +1,6 @@
 package ch.bbw.modul133.catmanagement.controller;
 
+import ch.bbw.modul133.catmanagement.model.CatManagement;
 import ch.bbw.modul133.catmanagement.service.CatService;
 import ch.bbw.modul133.catmanagement.model.Cat;
 import org.springframework.stereotype.Controller;
@@ -13,22 +14,22 @@ import java.util.List;
 @Controller
 public class CatController {
 
-    private final CatService repository;
+    private final CatService service;
 
-    public CatController(final CatService repository) {
-        this.repository = repository;
+    public CatController(final CatService service) {
+        this.service = service;
     }
 
     @GetMapping("/cats")
     public String showAllCats(Model model, @ModelAttribute Cat cat) {
-        model.addAttribute("cats", repository.getAllCats());
+        model.addAttribute("cats", service.getAllCats());
         model.addAttribute("kitty", cat);
         return "show-all-cats";
     }
 
     @ModelAttribute("allCats")
     public List<Cat> populateCats() {
-        return repository.getAllCats();
+        return service.getAllCats();
     }
 
     @GetMapping("/updateCat/{id}")
@@ -40,5 +41,11 @@ public class CatController {
         }
 
         return "update-view";
+    }
+
+    @PostMapping("/addCat")
+    public String addCat(Cat catToAdd) {
+        this.service.createCat(catToAdd);
+        return "show-all-cats";
     }
 }
