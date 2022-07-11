@@ -1,5 +1,7 @@
-package ch.bbw.modul133.catmanagement;
+package ch.bbw.modul133.catmanagement.controller;
 
+import ch.bbw.modul133.catmanagement.model.CatRepository;
+import ch.bbw.modul133.catmanagement.model.Cat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

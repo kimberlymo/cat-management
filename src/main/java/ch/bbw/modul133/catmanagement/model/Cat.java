@@ -1,4 +1,4 @@
-package ch.bbw.modul133.catmanagement;
+package ch.bbw.modul133.catmanagement.model;
 
 import javax.validation.constraints.Size;
 import javax.validation.constraints.NotNull;

@@ -1,4 +1,4 @@
-package ch.bbw.modul133.catmanagement;
+package ch.bbw.modul133.catmanagement.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ClassPathResource;

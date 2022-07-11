@@ -1,4 +1,8 @@
-package ch.bbw.modul133.catmanagement;
+package ch.bbw.modul133.catmanagement.model;
+
+import ch.bbw.modul133.catmanagement.model.Cat;
+import ch.bbw.modul133.catmanagement.model.CatManagement;
+import ch.bbw.modul133.catmanagement.model.ReadData;
 
 import org.springframework.stereotype.Component;
 
