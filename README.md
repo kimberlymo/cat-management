@@ -46,11 +46,20 @@ den Geburtstag ändern.
 
 <img src="images/create-cat-computer.png" alt="create a cat on computer" width="400">
 
-Dieses Wireframe zeigt die Seite auf der, der User eine Katze erstellen kann. Auf der Seite ist unser Bild/Logo. Daneben
-auf der rechten Seite ist das Formular um die Daten der neuen Katze einzutragen. Und unterhalb kann der User die Daten
-wieder löschen, indem er auf den `Reset`-Button klickt. Und beim `Submit`-Button wird die Katze mit den eingegebenen
-Daten erstellt. Falls ein Input-Feld nicht mit unserem Fehler-Handling übereinstimmt, wird auf der rechten Seite den
-entsprechender Error angezeigt.
+Dieses Wireframe zeigt die Seite auf der, der User eine Katze erstellen kann. Auf der Seite ist unser Bild/Logo in der
+`Sidebar`. Daneben auf der rechten Seite ist das Formular um die Daten der neuen Katze einzutragen. Und unterhalb kann
+der User die Daten wieder löschen, indem er auf den `Reset`-Button klickt. Und beim `Submit`-Button wird die Katze mit
+den eingegebenen Daten erstellt. Falls ein Input-Feld nicht mit unserem Fehler-Handling übereinstimmt, wird auf der
+rechten Seite den entsprechender Error angezeigt.
+
+### Update Cat
+
+<img src="/images/update-cat-computer.png" alt="updates the cat you choose" width="400">
+
+Und das letzte Wireframe ist dafür da um die ausgewählte Katze zu bearbeiten. Auf der Seite ist wieder unser Bild/Logo
+in der `Sidebar`. Auf der rechten Seite der Webseite ist das Formular in den der User die Daten geben kann. Ein
+wichtiger Punkt ist das der User den Namen der Katze nicht ändern darf. Bei der `Checkbox` wird es ausgewählt sein wenn
+es eine `outdoor-cat`ist. Zum Schluss um es abzuspeichern und zu beenden, kann der User den `update`-Button anklicken.
 
 ## 🎬 Use Cases
 
