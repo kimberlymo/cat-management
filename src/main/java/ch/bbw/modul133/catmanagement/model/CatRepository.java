@@ -1,9 +1,5 @@
 package ch.bbw.modul133.catmanagement.model;
 
-import ch.bbw.modul133.catmanagement.model.Cat;
-import ch.bbw.modul133.catmanagement.model.CatManagement;
-import ch.bbw.modul133.catmanagement.model.ReadData;
-
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -12,7 +8,15 @@ import java.util.stream.IntStream;
 
 @Component
 public class CatRepository {
-    private final ReadData readData = new ReadData();
+    private final FileRepository<CatManagement> readData;
+
+    public CatRepository() {
+        this.readData = new ReadData();
+    }
+
+    public CatRepository(FileRepository<CatManagement> readData) {
+        this.readData = readData;
+    }
 
     public List<Cat> getAllCats() {
         return readData.readFile().cats();

@@ -6,7 +6,7 @@ import org.springframework.core.io.ClassPathResource;
 import java.io.File;
 import java.io.IOException;
 
-public class ReadData {
+public class ReadData implements FileRepository<CatManagement> {
     private final ObjectMapper objectMapper = new ObjectMapper();
     private final File file;
 
@@ -19,6 +19,7 @@ public class ReadData {
         }
     }
 
+    @Override
     public CatManagement readFile() {
         try {
             return objectMapper.readValue(file, CatManagement.class);
@@ -28,6 +29,7 @@ public class ReadData {
         }
     }
 
+    @Override
     public void persist(CatManagement catHotel) {
         try {
             objectMapper.writeValue(file, catHotel);
