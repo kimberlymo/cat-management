@@ -33,14 +33,20 @@ public class CatController {
     }
 
     @GetMapping("/updateCat/{id}")
-    public String updateCat(Model model, @Valid Cat catToEdit, BindingResult bindingResult, @PathVariable String name) {
+    public String updateCatView(Model model, @PathVariable String id) {
+        model.addAttribute("editCat", new Cat());
+        return "update-view";
+    }
+
+    @PutMapping("/updateCat/{id}")
+    public String updateCat(Model model, @Valid Cat catToEdit, BindingResult bindingResult, @PathVariable String id) {
         model.addAttribute("newValues", catToEdit);
 
         if (bindingResult.hasErrors()) {
-            return "show-all-cats";
+            return "update-view";
         }
 
-        return "update-view";
+        return "show-all-cats";
     }
 
     @GetMapping("/addCat")
