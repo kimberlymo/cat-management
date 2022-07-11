@@ -32,3 +32,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Check formatting
         run: prettier --check src/main/resources
+  java-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run tests
+        run: mvn test
