@@ -12,10 +12,10 @@
     <h1>Cats</h1>
     <table class="table table-hover">
       <tr>
-        <th>Name</th>
-        <th>Birthday</th>
-        <th>Color</th>
-        <th>Is an outdoor cat?</th>
+        <th th:text="#{cat.name}"></th>
+        <th th:text="#{cat.birthday}"></th>
+        <th th:text="#{cat.color}"></th>
+        <th th:text="#{cat.outdoor}"></th>
       </tr>
       <tbody>
         <tr th:each="kitty : ${allCats}">
