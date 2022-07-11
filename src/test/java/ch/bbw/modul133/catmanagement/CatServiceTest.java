@@ -1,7 +1,7 @@
 package ch.bbw.modul133.catmanagement;
 
 import ch.bbw.modul133.catmanagement.model.Cat;
-import ch.bbw.modul133.catmanagement.service.CatService;
+import ch.bbw.modul133.catmanagement.model.CatService;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 

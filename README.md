@@ -5,13 +5,13 @@
 <hr/>
 Ein Katzenverwaltungstool, wo man seine Katzen verwalten kann. Man kann über ein Form neue Katzen hinzufügen und 
 die eingegebenen Daten werden auch validiert. 
-Die Katzen können dann angeschaut werden. Es werden keine Bilder sondern nur Textinformationen über die Katzen hochgeladen.
+Die Katzen können dann angeschaut werden. Es werden keine Bilder, sondern nur Textinformationen über die Katzen hochgeladen.
 Die Website wird dann auf Deutsch und Englisch verfügbar sein.
 
 ## 📒 Layout
 
 <hr/>
-In diesem Kapitel sind alle Layouts zu finden die in diesem Projekt verwendet werden.
+In diesem Kapitel sind alle Layouts zu finden, die in diesem Projekt verwendet werden.
 Mit Hilfe von den Bootstrap Templates sind wir auf die folgenden Lösungen gekommen.
 
 ### Layout für Computer / IPad:
@@ -27,7 +27,7 @@ ersetzt. Der Titel der Seite kann zum Beispiel sein `Neue Katze erfassen`.
 <img src="images/layout-phone.png" alt="layout for phone" width="200"/>
 
 Auch in diesem Layout wird der Content ersetzt mit dem jeweiligen Thema. Oben ist ein Header sowie auch ein
-Hamburger-Menü In diesem Hamburger-Menü sind auch die gleichen Links zu finden wie im Layout für Computer. Der Titel
+Hamburger-Menü. In diesem Hamburger-Menü sind auch die gleichen Links zu finden wie im Layout für Computer. Der Titel
 dieser Seite kann auch hier zum Beispiel `Neue Katze erfassen` sein.
 
 ## 🖼️ GUI Skizzen
@@ -35,11 +35,22 @@ dieser Seite kann auch hier zum Beispiel `Neue Katze erfassen` sein.
 <hr/>
 
 ### View all Cats
+
 <img src="images/view-all-cats-computer.png" alt="view all cats on computer" width="400"/>
 
-Here is a wireframe for seeing all cats. The data will be shown in a table and with the `add new cat` button a new window
-will open. With the blue button the cat can be edited for example change the birthday.
+Hier ist ein Wireframe für die Anzeige aller Katzen. Die Daten werden in einer Tabelle angezeigt und mit der
+Schaltfläche `add new cat` wird ein neues Fenster geöffnet. Mit dem blauen Button kann die Katze bearbeitet werden, z.B.
+den Geburtstag ändern.
 
+### Create a Cat
+
+<img src="images/create-cat-computer.png" alt="create a cat on computer" width="400">
+
+Dieses Wireframe zeigt die Seite auf der, der User eine Katze erstellen kann. Auf der Seite ist unser Bild/Logo. Daneben
+auf der rechten Seite ist das Formular um die Daten der neuen Katze einzutragen. Und unterhalb kann der User die Daten
+wieder löschen, indem er auf den `Reset`-Button klickt. Und beim `Submit`-Button wird die Katze mit den eingegebenen
+Daten erstellt. Falls ein Input-Feld nicht mit unserem Fehler-Handling übereinstimmt, wird auf der rechten Seite den
+entsprechender Error angezeigt.
 
 ## 🎬 Use Cases
 
@@ -52,5 +63,5 @@ sind sie ersichtlich.
 <img src="images/use-cases-overall.png" alt="use cases for our cat management">
 
 Der erste Use Case ist, wenn unser User eine neue Katze in unser `cat-management` (System) eintragen möchte. Das zweite
-ist dafür da, die Katzen in unserem `cat-management` anzuschauen. Und das dritte sowie auch das letzte kann der
-User die eingegebenen Katzen bearbeiten, wenn die Daten nicht mehr aktuell wären.
+ist dafür da, die Katzen in unserem `cat-management` anzuschauen. Und das dritte sowie auch das letzte kann der User die
+eingegebenen Katzen bearbeiten, wenn die Daten nicht mehr aktuell wären.
