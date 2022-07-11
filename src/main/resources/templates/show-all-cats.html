@@ -26,7 +26,8 @@
                     <th:block th:if="${!kitty.isOutdoor()}">❌</th:block>
                 </td>
                 <td>
-                    <a class="btn btn-primary" style="background-color: #26b8e5; border: none" href="#"
+                    <a class="btn btn-primary" style="background-color: #26b8e5; border: none"
+                       th:href="@{/updateCat/{id}(id=${kitty.getName()})}"
                        role="button">✏️</a>
                 </td>
             </tr>
@@ -34,8 +35,9 @@
         </table>
         <div class="row">
             <div class="col-6"></div>
-            <a class="btn btn-primary col-4" style="background-color: #e57426; border: none" href="#"
-               role="button">Add new Cat</a>
+            <a class="btn btn-primary col-4" style="background-color: #e57426; border: none" href="#" role="button">
+                Add new Cat
+            </a>
         </div>
     </div>
 </div>
