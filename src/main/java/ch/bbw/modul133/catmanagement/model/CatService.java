@@ -1,4 +1,4 @@
-package ch.bbw.modul133.catmanagement.service;
+package ch.bbw.modul133.catmanagement.model;
 
 import ch.bbw.modul133.catmanagement.model.Cat;
 import ch.bbw.modul133.catmanagement.model.CatManagement;

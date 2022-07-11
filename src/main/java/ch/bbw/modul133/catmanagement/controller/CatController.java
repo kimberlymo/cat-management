@@ -1,7 +1,6 @@
 package ch.bbw.modul133.catmanagement.controller;
 
-import ch.bbw.modul133.catmanagement.model.CatManagement;
-import ch.bbw.modul133.catmanagement.service.CatService;
+import ch.bbw.modul133.catmanagement.model.CatService;
 import ch.bbw.modul133.catmanagement.model.Cat;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
