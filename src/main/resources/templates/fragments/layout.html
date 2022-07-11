@@ -3,6 +3,7 @@
   lang="en"
   xmlns:th="http://www.thymeleaf.org"
   xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  style="height: 100%"
 >
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -14,9 +15,17 @@
   </head>
   <body>
     <div class="wrapper">
-      <div th:replace="fragments/fragments-sidebar :: sidebar"></div>
-
-      <div layout:fragment="content"></div>
+      <div class="m-3">
+        <h1 th:text="#{title.catManagement}"></h1>
+        <div class="row" style="height: 100%">
+          <div class="col-4" style="background-color: orange; height: 100%">
+            <div th:replace="fragments/fragments-sidebar :: sidebar"></div>
+          </div>
+          <div class="col-8">
+            <div layout:fragment="content"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
