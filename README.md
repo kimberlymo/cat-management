@@ -74,3 +74,5 @@ sind sie ersichtlich.
 Der erste Use Case ist, wenn unser User eine neue Katze in unser `cat-management` (System) eintragen möchte. Das zweite
 ist dafür da, die Katzen in unserem `cat-management` anzuschauen. Und das dritte sowie auch das letzte kann der User die
 eingegebenen Katzen bearbeiten, wenn die Daten nicht mehr aktuell wären.
+
+:3
